@@ -1,0 +1,2300 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/9/2024 10:34:34 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VM-10-0064"
+  DTS:CreatorName="HRS\tma04"
+  DTS:DTSID="{B421C16A-CE83-4FDA-9765-08338C2358B4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="AgencyBusinessRules"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{DD8C4B21-8EA2-43CA-B0FB-53A2A1702198}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7BBE5E79-ADF0-4B3E-A455-9F2743FA7C29}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\tma04\source\repos\HRSPaywallCommissionRules\Export\AgencyBusinessRules.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Code"
+              DTS:DTSID="{74753D5B-5808-456A-92AB-2DE6F45057C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type"
+              DTS:DTSID="{6E3549A8-18FC-47B3-B8FF-6A025254B0FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country Code"
+              DTS:DTSID="{1E6F3140-2603-4232-9A85-0B8ECF46C90C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Chain"
+              DTS:DTSID="{E03104FE-87A1-4223-9B57-E1875E4F3690}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brand"
+              DTS:DTSID="{BD95BE0C-B7EC-4217-B94F-6590267A84F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Owner"
+              DTS:DTSID="{9E7FE612-C810-4F3F-A3D8-2B46EBBE12F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Partner No_"
+              DTS:DTSID="{3BAFA146-401C-4A54-9D7C-12150845D44C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Status"
+              DTS:DTSID="{60CEC151-43CE-4B7D-AE58-1EBAE7F5D799}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Grp_ Code"
+              DTS:DTSID="{B5E6E5B8-CEE8-48C3-94B7-128DA0546E44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Code"
+              DTS:DTSID="{5ED5B593-3E7A-4BFF-96D3-7BD5E6A72D84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Valid from"
+              DTS:DTSID="{A4871565-F431-48BE-A237-DF8223A9028B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Valid to"
+              DTS:DTSID="{E58708D2-DB44-4DA4-8C1E-16A6EFEB93AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Enabled"
+              DTS:DTSID="{94EFFC44-654C-4C57-BFF9-750CE5E6E49E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Approved"
+              DTS:DTSID="{F30CF3BD-E2EC-4315-88D0-54BB9DC75A94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Inserted by User"
+              DTS:DTSID="{C5A7C537-5F63-454C-BCA3-4942F6A38932}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Inserted at"
+              DTS:DTSID="{9C4CDF8F-6DC9-4B57-8926-430E739C963D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Modified by User"
+              DTS:DTSID="{4DE95EEB-BA0E-48DC-A017-72716F00C103}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Modified at"
+              DTS:DTSID="{0065447E-58B9-4D47-B7DD-945C04D92A7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hotel No_"
+              DTS:DTSID="{F614C6E8-594C-4614-B8DA-15C19C02111F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Old Code"
+              DTS:DTSID="{DBECBCBF-3843-4635-99E6-0A5D618C0B99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Continent"
+              DTS:DTSID="{2E2CB04D-49FB-4BF4-A7A5-1A5916861F8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date of Reference"
+              DTS:DTSID="{3D9470C0-D520-43A2-AEB4-58DD4B690D8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{95B1E93B-7BCF-4152-9989-0F76319F66F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MuseID"
+              DTS:DTSID="{0D65E664-D394-4D80-BDC5-1E905099A7AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Parent Business Rule Code"
+              DTS:DTSID="{AE189E0E-0438-4599-B562-57DE34E82742}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Searchorder No_"
+              DTS:DTSID="{C990937B-F8C3-4BD5-814E-61EEA3762024}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DB2 Rule"
+              DTS:DTSID="{5581C749-921E-4D81-A18E-60B36E6A58C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="timestamp Source"
+              DTS:DTSID="{0C49BAEA-47D8-41B4-9884-C11DA1570B20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Company No_"
+              DTS:DTSID="{F32244AA-CDEF-43CF-9ECD-D2588CDEAC9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Preferred"
+              DTS:DTSID="{7B95E020-B744-44A7-9D87-E972ACC05462}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rate Type"
+              DTS:DTSID="{4F0354AC-2F37-4E64-A3A8-2A23C02E5AEA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Corporate Rate Discount"
+              DTS:DTSID="{BD7BD270-84B6-403E-B7A3-5F769AC23880}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Code w_o Breakfast"
+              DTS:DTSID="{1A4CAE7F-1B92-4285-9AA1-0721CFF99C0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Code Net Sales"
+              DTS:DTSID="{24311BCA-4ECD-49F3-AFEE-DEAC74115DBD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Code Net Logis"
+              DTS:DTSID="{C768D289-7AE9-413A-BE41-F1C78559399D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Segment"
+              DTS:DTSID="{156CAD52-9D2C-447F-A686-F317DEAF9FAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Commission Type"
+              DTS:DTSID="{3039EABC-8CE3-407E-8F49-B87BD4B82805}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TAF Contract Code"
+              DTS:DTSID="{F8548417-CBA1-4D64-8420-1E0395633A7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GTC Status"
+              DTS:DTSID="{3A648423-A174-4649-BBEC-6E505372D350}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rate Plan Code"
+              DTS:DTSID="{6054CC19-D585-4554-953A-AE336B44F049}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Differing Customer No_"
+              DTS:DTSID="{651E89A7-7220-4FF5-B482-2E9F9F288908}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product"
+              DTS:DTSID="{DEA96358-4451-460A-B8FB-BC4C3CD10AD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Source Class"
+              DTS:DTSID="{878745C6-71C2-4CDF-AA64-47379C6F98BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accounting Interval"
+              DTS:DTSID="{277913F7-620A-4CEF-B0FE-535927BAF07C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Starting Date"
+              DTS:DTSID="{C8092BB3-4661-4DC4-A8FC-3900A80B104C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shortcut Dimension 1 Code"
+              DTS:DTSID="{04F42729-C565-4738-A263-845836BD3059}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Copied from Business Rule Code"
+              DTS:DTSID="{650BF790-8394-478D-8185-1EC8D07323CA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4DE1BECA-D7D7-42CC-B86D-B6B23210DC3D}"
+      DTS:ObjectName="P-NAV-MSSQL-CL.DynNavHRS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=P-NAV-MSSQL-CL;Initial Catalog=DynNavHRS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{659684EB-7E3D-45E0-A836-0A51FB305137}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\Flatfileziel"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flatfileziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Flatfileziel"
+              localeId="1031"
+              name="Flatfileziel">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Gibt an, ob die Daten die Zieldatei überschreiben oder an sie angehängt werden."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Gibt den Text an, der vor dem Schreiben von Daten in die Zieldatei geschrieben werden soll."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Bei Aktivierung des Textqualifizierers wird hiermit angegeben, ob der Textqualifizierer in den Daten, die in die Zieldatei geschrieben werden, mit Escapezeichen versehen wird."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Flatfileziel.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+                  hasSideEffects="true"
+                  name="Eingabe des Flatfileziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Type]"
+                      cachedDataType="i4"
+                      cachedName="Type"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Type]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Country Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Country Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Country Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Chain]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Chain"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Chain]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Chain]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Brand]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Brand"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Brand]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Brand]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Owner]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Owner"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Owner]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Owner]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Partner No_]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Partner No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Partner No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Partner No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Contract Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Contract Status"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Status]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Status]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Contract Grp_ Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Contract Grp_ Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Grp_ Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Grp_ Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Contract Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Contract Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Valid from]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Valid from"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Valid from]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Valid from]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Valid to]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Valid to"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Valid to]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Valid to]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Enabled]"
+                      cachedDataType="ui1"
+                      cachedName="Enabled"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Enabled]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Enabled]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Approved]"
+                      cachedDataType="ui1"
+                      cachedName="Approved"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Approved]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Approved]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Inserted by User]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Inserted by User"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Inserted by User]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Inserted by User]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Inserted at]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Inserted at"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Inserted at]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Inserted at]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Modified by User]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Modified by User"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Modified by User]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Modified by User]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Modified at]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Modified at"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Modified at]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Modified at]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Hotel No_]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Hotel No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Hotel No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Old Code]"
+                      cachedDataType="i4"
+                      cachedName="Old Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Old Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Old Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Continent]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Continent"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Continent]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Continent]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Date of Reference]"
+                      cachedDataType="i4"
+                      cachedName="Date of Reference"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Date of Reference]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Date of Reference]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Category]"
+                      cachedDataType="i4"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Category]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[MuseID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="MuseID"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[MuseID]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[MuseID]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Parent Business Rule Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Parent Business Rule Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Parent Business Rule Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Parent Business Rule Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Searchorder No_]"
+                      cachedDataType="i4"
+                      cachedName="Searchorder No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Searchorder No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Searchorder No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[DB2 Rule]"
+                      cachedDataType="ui1"
+                      cachedName="DB2 Rule"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[DB2 Rule]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[DB2 Rule]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[timestamp Source]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="timestamp Source"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[timestamp Source]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[timestamp Source]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Company No_]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Company No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Company No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Company No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Preferred]"
+                      cachedDataType="ui1"
+                      cachedName="Preferred"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Preferred]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Preferred]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Rate Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Rate Type"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Type]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Type]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Corporate Rate Discount]"
+                      cachedDataType="i4"
+                      cachedName="Corporate Rate Discount"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Corporate Rate Discount]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Contract Code w_o Breakfast]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Contract Code w_o Breakfast"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code w_o Breakfast]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code w_o Breakfast]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Contract Code Net Sales]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Contract Code Net Sales"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code Net Sales]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code Net Sales]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Contract Code Net Logis]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Contract Code Net Logis"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code Net Logis]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code Net Logis]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Segment]"
+                      cachedDataType="i4"
+                      cachedName="Segment"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Segment]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Segment]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Commission Type]"
+                      cachedDataType="i4"
+                      cachedName="Commission Type"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Commission Type]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Commission Type]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[TAF Contract Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TAF Contract Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[TAF Contract Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[TAF Contract Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[GTC Status]"
+                      cachedDataType="i4"
+                      cachedName="GTC Status"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[GTC Status]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GTC Status]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Rate Plan Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Rate Plan Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Plan Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Plan Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Differing Customer No_]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Differing Customer No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Differing Customer No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Differing Customer No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Product]"
+                      cachedDataType="i4"
+                      cachedName="Product"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Product]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Source Class]"
+                      cachedDataType="i4"
+                      cachedName="Source Class"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Source Class]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Source Class]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Accounting Interval]"
+                      cachedDataType="i4"
+                      cachedName="Accounting Interval"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Accounting Interval]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Accounting Interval]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Starting Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Starting Date"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Starting Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Starting Date]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Shortcut Dimension 1 Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Shortcut Dimension 1 Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Shortcut Dimension 1 Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Shortcut Dimension 1 Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Copied from Business Rule Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Copied from Business Rule Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Copied from Business Rule Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Copied from Business Rule Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Type]"
+                      dataType="i4"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Country Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Country Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Chain]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Chain" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Brand]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Owner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Owner" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Partner No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Partner No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Contract Status" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Grp_ Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Grp_ Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Valid from]"
+                      dataType="dbTimeStamp"
+                      name="Valid from" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Valid to]"
+                      dataType="dbTimeStamp"
+                      name="Valid to" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Enabled]"
+                      dataType="ui1"
+                      name="Enabled" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Approved]"
+                      dataType="ui1"
+                      name="Approved" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Inserted by User]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Inserted by User" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Inserted at]"
+                      dataType="dbTimeStamp"
+                      name="Inserted at" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Modified by User]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Modified by User" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Modified at]"
+                      dataType="dbTimeStamp"
+                      name="Modified at" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Hotel No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Hotel No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Old Code]"
+                      dataType="i4"
+                      name="Old Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Date of Reference]"
+                      dataType="i4"
+                      name="Date of Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Category]"
+                      dataType="i4"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[MuseID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="MuseID" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Parent Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Parent Business Rule Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Searchorder No_]"
+                      dataType="i4"
+                      name="Searchorder No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[DB2 Rule]"
+                      dataType="ui1"
+                      name="DB2 Rule" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[timestamp Source]"
+                      dataType="dbTimeStamp"
+                      name="timestamp Source" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Company No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Company No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Preferred]"
+                      dataType="ui1"
+                      name="Preferred" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Rate Type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Corporate Rate Discount]"
+                      dataType="i4"
+                      name="Corporate Rate Discount" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code w_o Breakfast]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code w_o Breakfast" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code Net Sales]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code Net Sales" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Code Net Logis]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code Net Logis" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Segment]"
+                      dataType="i4"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Commission Type]"
+                      dataType="i4"
+                      name="Commission Type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[TAF Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="TAF Contract Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[GTC Status]"
+                      dataType="i4"
+                      name="GTC Status" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Plan Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Rate Plan Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Differing Customer No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Differing Customer No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Product]"
+                      dataType="i4"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Source Class]"
+                      dataType="i4"
+                      name="Source Class" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Accounting Interval]"
+                      dataType="i4"
+                      name="Accounting Interval" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Starting Date]"
+                      dataType="dbTimeStamp"
+                      name="Starting Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Shortcut Dimension 1 Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Shortcut Dimension 1 Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Copied from Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Copied from Business Rule Code" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\OLE DB-Quelle"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="OLE DB-Quelle"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [Code]
+      ,[Type]
+      ,[Country Code]
+      ,[Chain]
+      ,[Brand]
+      ,[Owner]
+      ,[Partner No_]
+      ,[Contract Status]
+      ,[Contract Grp_ Code]
+      ,[Contract Code]
+      ,[Valid from]
+      ,[Valid to]
+      ,[Enabled]
+      ,[Approved]
+      ,[Inserted by User]
+      ,[Inserted at]
+      ,[Modified by User]
+      ,[Modified at]
+      ,[Hotel No_]
+      ,[Old Code]
+      ,[Continent]
+      ,[Date of Reference]
+      ,[Category]
+      ,[MuseID]
+      ,[Parent Business Rule Code]
+      ,[Searchorder No_]
+      ,[DB2 Rule]
+      ,[timestamp Source]
+      ,[Company No_]
+      ,[Preferred]
+      ,[Rate Type]
+      ,[Corporate Rate Discount]
+      ,[Contract Code w_o Breakfast]
+      ,[Contract Code Net Sales]
+      ,[Contract Code Net Logis]
+      ,[Segment]
+      ,[Commission Type]
+      ,[TAF Contract Code]
+      ,[GTC Status]
+      ,[Rate Plan Code]
+      ,[Differing Customer No_]
+      ,[Product]
+      ,[Source Class]
+      ,[Accounting Interval]
+      ,[Starting Date]
+      ,[Shortcut Dimension 1 Code]
+      ,[Copied from Business Rule Code]
+  FROM [dbo].[HRS$Agency Business Rules]
+ WHERE [Code] IN (SELECT [Agency Business Rules Code] FROM [HRS$Agency Display Line] DL WITH (NOLOCK) JOIN [HRS$Agency Display Header] DH WITH (NOLOCK) ON DL.[Display Case No_]=DH.[Case No_] WHERE DL.[Departure Date] &gt;= '2022-01-01' GROUP BY [Agency Business Rules Code])</property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  connectionManagerRefId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Code]"
+                      name="Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Type]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Type]"
+                      name="Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Country Code]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      name="Country Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Chain]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Chain]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Chain]"
+                      name="Chain"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Brand]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Brand]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Brand]"
+                      name="Brand"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Owner]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Owner]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Owner]"
+                      name="Owner"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Partner No_]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Partner No_]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Partner No_]"
+                      name="Partner No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Status]"
+                      length="30"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Status]"
+                      name="Contract Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Grp_ Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Grp_ Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Grp_ Code]"
+                      name="Contract Grp_ Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code]"
+                      name="Contract Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Valid from]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Valid from]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Valid from]"
+                      name="Valid from"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Valid to]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Valid to]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Valid to]"
+                      name="Valid to"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Enabled]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Enabled]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Enabled]"
+                      name="Enabled"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Approved]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Approved]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Approved]"
+                      name="Approved"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Inserted by User]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Inserted by User]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Inserted by User]"
+                      name="Inserted by User"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Inserted at]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Inserted at]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Inserted at]"
+                      name="Inserted at"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Modified by User]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Modified by User]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Modified by User]"
+                      name="Modified by User"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Modified at]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Modified at]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Modified at]"
+                      name="Modified at"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel No_]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Hotel No_]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel No_]"
+                      name="Hotel No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Old Code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Old Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Old Code]"
+                      name="Old Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Continent]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Continent]"
+                      name="Continent"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Date of Reference]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Date of Reference]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Date of Reference]"
+                      name="Date of Reference"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Category]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Category]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[MuseID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[MuseID]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[MuseID]"
+                      name="MuseID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Parent Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Parent Business Rule Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Parent Business Rule Code]"
+                      name="Parent Business Rule Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Searchorder No_]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Searchorder No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Searchorder No_]"
+                      name="Searchorder No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[DB2 Rule]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[DB2 Rule]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[DB2 Rule]"
+                      name="DB2 Rule"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[timestamp Source]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[timestamp Source]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[timestamp Source]"
+                      name="timestamp Source"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Company No_]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Company No_]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Company No_]"
+                      name="Company No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Preferred]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Preferred]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Preferred]"
+                      name="Preferred"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Type]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Type]"
+                      name="Rate Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Corporate Rate Discount]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount]"
+                      name="Corporate Rate Discount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code w_o Breakfast]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code w_o Breakfast]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code w_o Breakfast]"
+                      name="Contract Code w_o Breakfast"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code Net Sales]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code Net Sales]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code Net Sales]"
+                      name="Contract Code Net Sales"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code Net Logis]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code Net Logis]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Code Net Logis]"
+                      name="Contract Code Net Logis"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Segment]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Segment]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Segment]"
+                      name="Segment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Commission Type]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Commission Type]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Commission Type]"
+                      name="Commission Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[TAF Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[TAF Contract Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[TAF Contract Code]"
+                      name="TAF Contract Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GTC Status]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GTC Status]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GTC Status]"
+                      name="GTC Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Plan Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Plan Code]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Plan Code]"
+                      name="Rate Plan Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Differing Customer No_]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Differing Customer No_]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Differing Customer No_]"
+                      name="Differing Customer No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Product]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Product]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Product]"
+                      name="Product"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Source Class]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Source Class]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Source Class]"
+                      name="Source Class"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Accounting Interval]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Accounting Interval]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Accounting Interval]"
+                      name="Accounting Interval"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Starting Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Starting Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Starting Date]"
+                      name="Starting Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Shortcut Dimension 1 Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Shortcut Dimension 1 Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Shortcut Dimension 1 Code]"
+                      name="Shortcut Dimension 1 Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Copied from Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Copied from Business Rule Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Copied from Business Rule Code]"
+                      name="Copied from Business Rule Code"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Type]"
+                      dataType="i4"
+                      name="Type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Country Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Country Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Chain]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Chain" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Brand]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Owner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Owner" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Partner No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Partner No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Contract Status" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Grp_ Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Grp_ Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Valid from]"
+                      dataType="dbTimeStamp"
+                      name="Valid from" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Valid to]"
+                      dataType="dbTimeStamp"
+                      name="Valid to" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Enabled]"
+                      dataType="ui1"
+                      name="Enabled" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Approved]"
+                      dataType="ui1"
+                      name="Approved" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Inserted by User]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Inserted by User" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Inserted at]"
+                      dataType="dbTimeStamp"
+                      name="Inserted at" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Modified by User]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Modified by User" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Modified at]"
+                      dataType="dbTimeStamp"
+                      name="Modified at" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Hotel No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Hotel No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Old Code]"
+                      dataType="i4"
+                      name="Old Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Continent" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Date of Reference]"
+                      dataType="i4"
+                      name="Date of Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Category]"
+                      dataType="i4"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[MuseID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="MuseID" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Parent Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Parent Business Rule Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Searchorder No_]"
+                      dataType="i4"
+                      name="Searchorder No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[DB2 Rule]"
+                      dataType="ui1"
+                      name="DB2 Rule" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[timestamp Source]"
+                      dataType="dbTimeStamp"
+                      name="timestamp Source" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Company No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Company No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Preferred]"
+                      dataType="ui1"
+                      name="Preferred" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Rate Type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Corporate Rate Discount]"
+                      dataType="i4"
+                      name="Corporate Rate Discount" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code w_o Breakfast]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code w_o Breakfast" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code Net Sales]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code Net Sales" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Code Net Logis]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Contract Code Net Logis" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Segment]"
+                      dataType="i4"
+                      name="Segment" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Commission Type]"
+                      dataType="i4"
+                      name="Commission Type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[TAF Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="TAF Contract Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GTC Status]"
+                      dataType="i4"
+                      name="GTC Status" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Plan Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Rate Plan Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Differing Customer No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Differing Customer No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Product]"
+                      dataType="i4"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Source Class]"
+                      dataType="i4"
+                      name="Source Class" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Accounting Interval]"
+                      dataType="i4"
+                      name="Accounting Interval" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Starting Date]"
+                      dataType="dbTimeStamp"
+                      name="Starting Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Shortcut Dimension 1 Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Shortcut Dimension 1 Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Copied from Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Copied from Business Rule Code" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Code]"
+                      name="Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Type]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Type]"
+                      name="Type" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      name="Country Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Chain]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Chain]"
+                      name="Chain" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Brand]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Brand]"
+                      name="Brand" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Owner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Owner]"
+                      name="Owner" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Partner No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Partner No_]"
+                      name="Partner No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Status]"
+                      name="Contract Status" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Grp_ Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Grp_ Code]"
+                      name="Contract Grp_ Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code]"
+                      name="Contract Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Valid from]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Valid from]"
+                      name="Valid from" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Valid to]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Valid to]"
+                      name="Valid to" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Enabled]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Enabled]"
+                      name="Enabled" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Approved]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Approved]"
+                      name="Approved" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Inserted by User]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Inserted by User]"
+                      name="Inserted by User" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Inserted at]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Inserted at]"
+                      name="Inserted at" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Modified by User]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Modified by User]"
+                      name="Modified by User" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Modified at]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Modified at]"
+                      name="Modified at" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Hotel No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Hotel No_]"
+                      name="Hotel No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Old Code]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Old Code]"
+                      name="Old Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Continent]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Continent]"
+                      name="Continent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Date of Reference]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Date of Reference]"
+                      name="Date of Reference" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Category]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[MuseID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[MuseID]"
+                      name="MuseID" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Parent Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Parent Business Rule Code]"
+                      name="Parent Business Rule Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Searchorder No_]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Searchorder No_]"
+                      name="Searchorder No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[DB2 Rule]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[DB2 Rule]"
+                      name="DB2 Rule" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[timestamp Source]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[timestamp Source]"
+                      name="timestamp Source" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Company No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Company No_]"
+                      name="Company No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Preferred]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Preferred]"
+                      name="Preferred" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Type]"
+                      name="Rate Type" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount]"
+                      name="Corporate Rate Discount" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code w_o Breakfast]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code w_o Breakfast]"
+                      name="Contract Code w_o Breakfast" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code Net Sales]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code Net Sales]"
+                      name="Contract Code Net Sales" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code Net Logis]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Code Net Logis]"
+                      name="Contract Code Net Logis" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Segment]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Segment]"
+                      name="Segment" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Commission Type]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Commission Type]"
+                      name="Commission Type" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[TAF Contract Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[TAF Contract Code]"
+                      name="TAF Contract Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GTC Status]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GTC Status]"
+                      name="GTC Status" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Plan Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Plan Code]"
+                      name="Rate Plan Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Differing Customer No_]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Differing Customer No_]"
+                      name="Differing Customer No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Product]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Product]"
+                      name="Product" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Source Class]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Source Class]"
+                      name="Source Class" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Accounting Interval]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Accounting Interval]"
+                      name="Accounting Interval" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Starting Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Starting Date]"
+                      name="Starting Date" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Shortcut Dimension 1 Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Shortcut Dimension 1 Code]"
+                      name="Shortcut Dimension 1 Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Copied from Business Rule Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Copied from Business Rule Code]"
+                      name="Copied from Business Rule Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Datenflusstask"
+          TopLeft="156,49" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Datenflusstask\OLE DB-Quelle"
+          TopLeft="233,63" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Datenflusstask\Flatfileziel"
+          TopLeft="292,210" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="310.5,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45.5,105"
+              Start="0,0"
+              End="45.5,97.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.5"
+                    Point2="0,52.5"
+                    Point3="4,52.5" />
+                  <mssgle:LineSegment
+                    End="41.5,52.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.5,52.5"
+                    Point2="45.5,52.5"
+                    Point3="45.5,56.5" />
+                  <mssgle:LineSegment
+                    End="45.5,97.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\OLE DB-Quelle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

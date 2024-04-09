@@ -1,0 +1,1230 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/9/2024 10:34:34 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VM-10-0064"
+  DTS:CreatorName="HRS\tma04"
+  DTS:DTSID="{67D665E9-A7F0-432A-837C-457AAF7D5229}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="AgencyBusRulesSearchorder"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6B04C1ED-EC83-4394-B6F2-ED8007459D5F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9663D760-C41A-4B94-BC74-A37DFBFDAE42}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\tma04\source\repos\HRSPaywallCommissionRules\Export\AgencyBusRulesSearchorder.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product"
+              DTS:DTSID="{7DDDC284-2B63-4004-9FF4-62E71109F82B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No_"
+              DTS:DTSID="{16AAB174-FB28-4027-A0E7-3FD789CD4D66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sortorder No_"
+              DTS:DTSID="{89AAF090-A4EC-4079-8E2D-73666EED7EBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Estimated Sortorder No_"
+              DTS:DTSID="{10B92CB0-0470-40EF-B2A9-403F8C2A950F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date of Reference Filter"
+              DTS:DTSID="{D3C19A4A-0350-4989-9554-7B555962D9A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category Filter"
+              DTS:DTSID="{DA4074D9-7BA1-4AD5-A5A8-F863A10FAC1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client Filter"
+              DTS:DTSID="{8A645A1D-EFDE-4961-B685-8DAF003B9CD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hotel Filter"
+              DTS:DTSID="{F0C09425-6EF0-4B71-8CA0-667FC19763F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract Status Filter"
+              DTS:DTSID="{E7D73A75-629C-4AFD-8985-57AA1129C891}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brand Filter"
+              DTS:DTSID="{B0B5AD31-F35B-47B4-AD86-AE1CD198AE50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Chain Filter"
+              DTS:DTSID="{0E7E1F58-3DE6-48B0-AB15-F2AABC463E3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MuseID Filter"
+              DTS:DTSID="{1D2EE789-A824-4525-9D78-089734852D9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country Filter"
+              DTS:DTSID="{9B08527D-F540-4735-A548-7338A8B78902}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Continent Filter"
+              DTS:DTSID="{4649DF6D-AE06-400B-98B7-99832F8CF035}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Is Country Rule"
+              DTS:DTSID="{BDECF72A-2BDA-462E-BEFD-BE1A461B5E9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{19953C5D-335D-4023-89D0-6E61C3EE4B4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Company Filter"
+              DTS:DTSID="{1E2B5659-5D10-497B-A094-AB1512F2160F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rate Type Filter"
+              DTS:DTSID="{CA63A1AA-92A4-4D22-9CDD-2705CC7EBD0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Corporate Rate Discount Filter"
+              DTS:DTSID="{7D8E82A4-AC40-4B6F-AE28-759CDE26C52B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Multisource"
+              DTS:DTSID="{231E7432-A92A-4E84-9975-9228D14C4952}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Segment Filter"
+              DTS:DTSID="{9525C954-6793-4310-A840-AE51F7CC14D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Commission Type Filter"
+              DTS:DTSID="{3E679811-EEBB-4AA7-82C2-8A0967560113}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GTC Rejected Filter"
+              DTS:DTSID="{5A8C7795-023B-44CA-8B54-634673992125}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rate Plan Code Filter"
+              DTS:DTSID="{E33F3B3A-625D-4611-A398-1D3E4B3D0528}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reservationsource Group Filter"
+              DTS:DTSID="{73FF93C4-36F0-4096-B690-0AAB1EF40E15}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{04152665-5682-404E-8A26-C5F568C1A8A3}"
+      DTS:ObjectName="P-NAV-MSSQL-CL.DynNavHRS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=P-NAV-MSSQL-CL;Initial Catalog=DynNavHRS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{4EDA95CC-5143-4E41-AAF4-5035B1A9ACC6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\Flatfileziel"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flatfileziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Flatfileziel"
+              localeId="1031"
+              name="Flatfileziel">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Gibt an, ob die Daten die Zieldatei überschreiben oder an sie angehängt werden."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Gibt den Text an, der vor dem Schreiben von Daten in die Zieldatei geschrieben werden soll."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Bei Aktivierung des Textqualifizierers wird hiermit angegeben, ob der Textqualifizierer in den Daten, die in die Zieldatei geschrieben werden, mit Escapezeichen versehen wird."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Flatfileziel.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+                  hasSideEffects="true"
+                  name="Eingabe des Flatfileziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Product]"
+                      cachedDataType="i4"
+                      cachedName="Product"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Product]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Product]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[No_]"
+                      cachedDataType="i4"
+                      cachedName="No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Sortorder No_]"
+                      cachedDataType="i4"
+                      cachedName="Sortorder No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Sortorder No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Sortorder No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Estimated Sortorder No_]"
+                      cachedDataType="i4"
+                      cachedName="Estimated Sortorder No_"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Estimated Sortorder No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Estimated Sortorder No_]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Date of Reference Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Date of Reference Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Date of Reference Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Date of Reference Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Category Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Category Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Category Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Category Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Client Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Client Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Client Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Client Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Hotel Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Hotel Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Hotel Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Contract Status Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Contract Status Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Status Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Status Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Brand Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Brand Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Brand Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Brand Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Chain Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Chain Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Chain Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Chain Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[MuseID Filter]"
+                      cachedDataType="ui1"
+                      cachedName="MuseID Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[MuseID Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[MuseID Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Country Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Country Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Country Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Continent Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Continent Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Continent Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Continent Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Is Country Rule]"
+                      cachedDataType="ui1"
+                      cachedName="Is Country Rule"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Is Country Rule]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Is Country Rule]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Description]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Description]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Company Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Company Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Company Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Company Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Rate Type Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Rate Type Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Type Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Type Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Corporate Rate Discount Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Corporate Rate Discount Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Corporate Rate Discount Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Multisource]"
+                      cachedDataType="ui1"
+                      cachedName="Multisource"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Multisource]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Multisource]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Segment Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Segment Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Segment Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Segment Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Commission Type Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Commission Type Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Commission Type Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Commission Type Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[GTC Rejected Filter]"
+                      cachedDataType="ui1"
+                      cachedName="GTC Rejected Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[GTC Rejected Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GTC Rejected Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Rate Plan Code Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Rate Plan Code Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Plan Code Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Plan Code Filter]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Reservationsource Group Filter]"
+                      cachedDataType="ui1"
+                      cachedName="Reservationsource Group Filter"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Reservationsource Group Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Reservationsource Group Filter]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Product]"
+                      dataType="i4"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[No_]"
+                      dataType="i4"
+                      name="No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Sortorder No_]"
+                      dataType="i4"
+                      name="Sortorder No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Estimated Sortorder No_]"
+                      dataType="i4"
+                      name="Estimated Sortorder No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Date of Reference Filter]"
+                      dataType="ui1"
+                      name="Date of Reference Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Category Filter]"
+                      dataType="ui1"
+                      name="Category Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Client Filter]"
+                      dataType="ui1"
+                      name="Client Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Hotel Filter]"
+                      dataType="ui1"
+                      name="Hotel Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Contract Status Filter]"
+                      dataType="ui1"
+                      name="Contract Status Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Brand Filter]"
+                      dataType="ui1"
+                      name="Brand Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Chain Filter]"
+                      dataType="ui1"
+                      name="Chain Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[MuseID Filter]"
+                      dataType="ui1"
+                      name="MuseID Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Country Filter]"
+                      dataType="ui1"
+                      name="Country Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Continent Filter]"
+                      dataType="ui1"
+                      name="Continent Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Is Country Rule]"
+                      dataType="ui1"
+                      name="Is Country Rule" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Company Filter]"
+                      dataType="ui1"
+                      name="Company Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Type Filter]"
+                      dataType="ui1"
+                      name="Rate Type Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Corporate Rate Discount Filter]"
+                      dataType="ui1"
+                      name="Corporate Rate Discount Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Multisource]"
+                      dataType="ui1"
+                      name="Multisource" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Segment Filter]"
+                      dataType="ui1"
+                      name="Segment Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Commission Type Filter]"
+                      dataType="ui1"
+                      name="Commission Type Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[GTC Rejected Filter]"
+                      dataType="ui1"
+                      name="GTC Rejected Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Rate Plan Code Filter]"
+                      dataType="ui1"
+                      name="Rate Plan Code Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Reservationsource Group Filter]"
+                      dataType="ui1"
+                      name="Reservationsource Group Filter" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\OLE DB-Quelle"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="OLE DB-Quelle"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [No_]
+      ,[Sortorder No_]
+      ,[Estimated Sortorder No_]
+      ,[Date of Reference Filter]
+      ,[Category Filter]
+      ,[Client Filter]
+      ,[Hotel Filter]
+      ,[Contract Status Filter]
+      ,[Brand Filter]
+      ,[Chain Filter]
+      ,[MuseID Filter]
+      ,[Country Filter]
+      ,[Continent Filter]
+      ,[Is Country Rule]
+      ,[Description]
+      ,[Company Filter]
+      ,[Rate Type Filter]
+      ,[Corporate Rate Discount Filter]
+      ,[Multisource]
+      ,[Segment Filter]
+      ,[Commission Type Filter]
+      ,[GTC Rejected Filter]
+      ,[Rate Plan Code Filter]
+      ,[Reservationsource Group Filter]
+      ,[Product]
+  FROM [dbo].[HRS$Agency Bus_ Rules Searchorder]
+ WHERE [No_] IN 
+       (
+          SELECT [Searchorder No_] 
+            FROM [HRS$Agency Display Line] DL WITH (NOLOCK) 
+            JOIN [HRS$Agency Display Header] DH WITH (NOLOCK) ON DL.[Display Case No_]=DH.[Case No_] 
+            JOIN [HRS$Agency Business Rules] BR WITH (NOLOCK) ON DL.[Agency Business Rules Code]=BR.[Code]
+           WHERE DL.[Departure Date] &gt;= '2022-01-01' 
+        GROUP BY [Searchorder No_]
+        )</property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  connectionManagerRefId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Product]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Product]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Product]"
+                      name="Product"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[No_]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[No_]"
+                      name="No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Sortorder No_]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Sortorder No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Sortorder No_]"
+                      name="Sortorder No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Estimated Sortorder No_]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Estimated Sortorder No_]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Estimated Sortorder No_]"
+                      name="Estimated Sortorder No_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Date of Reference Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Date of Reference Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Date of Reference Filter]"
+                      name="Date of Reference Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Category Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Category Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Category Filter]"
+                      name="Category Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Client Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Client Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Client Filter]"
+                      name="Client Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Hotel Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel Filter]"
+                      name="Hotel Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Status Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Status Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Contract Status Filter]"
+                      name="Contract Status Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Brand Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Brand Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Brand Filter]"
+                      name="Brand Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Chain Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Chain Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Chain Filter]"
+                      name="Chain Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[MuseID Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[MuseID Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[MuseID Filter]"
+                      name="MuseID Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Country Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Filter]"
+                      name="Country Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Continent Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Continent Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Continent Filter]"
+                      name="Continent Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Is Country Rule]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Is Country Rule]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Is Country Rule]"
+                      name="Is Country Rule"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Description]"
+                      length="100"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Company Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Company Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Company Filter]"
+                      name="Company Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Type Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Type Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Type Filter]"
+                      name="Rate Type Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Corporate Rate Discount Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount Filter]"
+                      name="Corporate Rate Discount Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Multisource]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Multisource]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Multisource]"
+                      name="Multisource"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Segment Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Segment Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Segment Filter]"
+                      name="Segment Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Commission Type Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Commission Type Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Commission Type Filter]"
+                      name="Commission Type Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GTC Rejected Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GTC Rejected Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[GTC Rejected Filter]"
+                      name="GTC Rejected Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Plan Code Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Plan Code Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Rate Plan Code Filter]"
+                      name="Rate Plan Code Filter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Reservationsource Group Filter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Reservationsource Group Filter]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Reservationsource Group Filter]"
+                      name="Reservationsource Group Filter"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Product]"
+                      dataType="i4"
+                      name="Product" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[No_]"
+                      dataType="i4"
+                      name="No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Sortorder No_]"
+                      dataType="i4"
+                      name="Sortorder No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Estimated Sortorder No_]"
+                      dataType="i4"
+                      name="Estimated Sortorder No_" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Date of Reference Filter]"
+                      dataType="ui1"
+                      name="Date of Reference Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Category Filter]"
+                      dataType="ui1"
+                      name="Category Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Client Filter]"
+                      dataType="ui1"
+                      name="Client Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Hotel Filter]"
+                      dataType="ui1"
+                      name="Hotel Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Contract Status Filter]"
+                      dataType="ui1"
+                      name="Contract Status Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Brand Filter]"
+                      dataType="ui1"
+                      name="Brand Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Chain Filter]"
+                      dataType="ui1"
+                      name="Chain Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[MuseID Filter]"
+                      dataType="ui1"
+                      name="MuseID Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Country Filter]"
+                      dataType="ui1"
+                      name="Country Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Continent Filter]"
+                      dataType="ui1"
+                      name="Continent Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Is Country Rule]"
+                      dataType="ui1"
+                      name="Is Country Rule" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Company Filter]"
+                      dataType="ui1"
+                      name="Company Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Type Filter]"
+                      dataType="ui1"
+                      name="Rate Type Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Corporate Rate Discount Filter]"
+                      dataType="ui1"
+                      name="Corporate Rate Discount Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Multisource]"
+                      dataType="ui1"
+                      name="Multisource" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Segment Filter]"
+                      dataType="ui1"
+                      name="Segment Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Commission Type Filter]"
+                      dataType="ui1"
+                      name="Commission Type Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[GTC Rejected Filter]"
+                      dataType="ui1"
+                      name="GTC Rejected Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Rate Plan Code Filter]"
+                      dataType="ui1"
+                      name="Rate Plan Code Filter" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Reservationsource Group Filter]"
+                      dataType="ui1"
+                      name="Reservationsource Group Filter" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[No_]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[No_]"
+                      name="No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Sortorder No_]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Sortorder No_]"
+                      name="Sortorder No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Estimated Sortorder No_]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Estimated Sortorder No_]"
+                      name="Estimated Sortorder No_" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Date of Reference Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Date of Reference Filter]"
+                      name="Date of Reference Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Category Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Category Filter]"
+                      name="Category Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Client Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Client Filter]"
+                      name="Client Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Hotel Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Hotel Filter]"
+                      name="Hotel Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Status Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Contract Status Filter]"
+                      name="Contract Status Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Brand Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Brand Filter]"
+                      name="Brand Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Chain Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Chain Filter]"
+                      name="Chain Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[MuseID Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[MuseID Filter]"
+                      name="MuseID Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Country Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Country Filter]"
+                      name="Country Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Continent Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Continent Filter]"
+                      name="Continent Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Is Country Rule]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Is Country Rule]"
+                      name="Is Country Rule" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Company Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Company Filter]"
+                      name="Company Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Type Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Type Filter]"
+                      name="Rate Type Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Corporate Rate Discount Filter]"
+                      name="Corporate Rate Discount Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Multisource]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Multisource]"
+                      name="Multisource" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Segment Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Segment Filter]"
+                      name="Segment Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Commission Type Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Commission Type Filter]"
+                      name="Commission Type Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GTC Rejected Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[GTC Rejected Filter]"
+                      name="GTC Rejected Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Plan Code Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Rate Plan Code Filter]"
+                      name="Rate Plan Code Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Reservationsource Group Filter]"
+                      dataType="ui1"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Reservationsource Group Filter]"
+                      name="Reservationsource Group Filter" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Product]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Product]"
+                      name="Product" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Datenflusstask"
+          TopLeft="156,49" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Datenflusstask\OLE DB-Quelle"
+          TopLeft="233,63" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Datenflusstask\Flatfileziel"
+          TopLeft="313,220" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="310.5,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.5,115"
+              Start="0,0"
+              End="66.5,107.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.5"
+                    Point2="0,57.5"
+                    Point3="4,57.5" />
+                  <mssgle:LineSegment
+                    End="62.5,57.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62.5,57.5"
+                    Point2="66.5,57.5"
+                    Point3="66.5,61.5" />
+                  <mssgle:LineSegment
+                    End="66.5,107.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\OLE DB-Quelle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
