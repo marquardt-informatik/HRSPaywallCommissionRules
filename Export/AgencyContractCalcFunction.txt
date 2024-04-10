@@ -1,0 +1,8 @@
+22|0|NAV|2022-07-28 07:33:22.267000000|NAV|2022-07-28 08:21:36.983000000|Percent net Sales (limited RN)|Percent net Sales (limited RN)|22|||||||||||||50000|Agency Commission Calculation
+11|0|NAV|2011-06-09 17:04:38.187000000|SA|2010-09-17 06:12:00|Fix per Roomnight|Fix per Roomnight|11|||||||||||||50000|Agency Commission Calculation
+10|0|NAV|2011-06-09 17:04:38.173000000|SA|2010-09-17 05:58:00|Percent net Sales|Percent net Sales|10|||||||||||||50000|Agency Commission Calculation
+8|0|NAV|2011-06-09 17:04:38.377000000|SA|2010-09-17 05:56:00|Percent net lodging|Percent net lodging|8|||||||||||||50000|Agency Commission Calculation
+1|0|NAV|2011-06-09 17:04:37.953000000|YWI01|2010-09-30 10:27:42.297000000|Percent|Percent|1|||||||||||||50000|Agency Commission Calculation
+12|0|TMA04|2011-08-17 16:08:36.650000000||1753-01-01 00:00:00|Corporate Rate|Percent|13|||||||||||||0|
+21|0|TMA04|2020-01-27 15:10:14.350000000|TMA04|2019-11-12 11:46:28.197000000|TAF per Roomnight (limited)|TAF per Roomnight (limited)|21|||||||||||||50000|Agency Commission Calculation
+4|0|NAV|2011-06-09 17:04:38.250000000|SA|2010-09-17 05:47:00|Precent w/o Breakfast|Percent w/o Breakfast|4|||||||||||||50000|Agency Commission Calculation
