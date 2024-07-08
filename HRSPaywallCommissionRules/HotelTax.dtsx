@@ -1,0 +1,709 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/9/2024 10:34:34 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VM-10-0064"
+  DTS:CreatorName="HRS\tma04"
+  DTS:DTSID="{6799E42C-8CA2-490A-9805-91078B80F845}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="HotelTax"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{D1F1B257-2E3E-41D2-87C2-DCDCE58B490C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7207AC63-6FC9-449B-A31B-713F11379DF9}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\tma04\source\repos\HRSPaywallCommissionRules\Export\HotelTax.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country Code"
+              DTS:DTSID="{A2A1BEEA-8E6D-4381-A648-B0A4F8FCFDBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hotel No"
+              DTS:DTSID="{93F81755-13EA-4BC9-8E5B-3D8195E072B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Post Code"
+              DTS:DTSID="{030A8EC5-5758-4C39-A257-69255CB563DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Room price limit"
+              DTS:DTSID="{04D92F00-FC92-434D-9B23-DEC707A84662}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Roomprice tax %"
+              DTS:DTSID="{4FD9C49C-3C1E-422F-BFC3-9C4B32B78878}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Breakfast tax %"
+              DTS:DTSID="{177869E7-B52B-409D-9644-96635D031A4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="2048"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deduction type"
+              DTS:DTSID="{8B494591-3642-4415-93AE-723F6943F508}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Deductible amount"
+              DTS:DTSID="{80295106-CDA5-401E-BEEF-4AA0C2BE8E42}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9E2DC81F-1783-4CE5-BFC1-B552092DAB86}"
+      DTS:ObjectName="P-NAV-MSSQL-CL.DynNavHRS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=P-NAV-MSSQL-CL;Initial Catalog=DynNavHRS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{93948CAD-BAFF-4E32-B184-FDB072A40CE7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\Flatfileziel"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flatfileziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Flatfileziel"
+              localeId="1031"
+              name="Flatfileziel">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Gibt an, ob die Daten die Zieldatei überschreiben oder an sie angehängt werden."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Gibt den Text an, der vor dem Schreiben von Daten in die Zieldatei geschrieben werden soll."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Bei Aktivierung des Textqualifizierers wird hiermit angegeben, ob der Textqualifizierer in den Daten, die in die Zieldatei geschrieben werden, mit Escapezeichen versehen wird."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Flatfileziel.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+                  hasSideEffects="true"
+                  name="Eingabe des Flatfileziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Country Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Country Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Country Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Hotel No]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Hotel No"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Hotel No]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel No]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Post Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Post Code"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Post Code]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Post Code]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Room price limit]"
+                      cachedDataType="i4"
+                      cachedName="Room price limit"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Room price limit]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Room price limit]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Roomprice tax %]"
+                      cachedDataType="numeric"
+                      cachedName="Roomprice tax %"
+                      cachedPrecision="38"
+                      cachedScale="16"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Roomprice tax %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Roomprice tax %]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Breakfast tax %]"
+                      cachedDataType="numeric"
+                      cachedName="Breakfast tax %"
+                      cachedPrecision="38"
+                      cachedScale="16"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Breakfast tax %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Breakfast tax %]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Deduction type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2048"
+                      cachedName="Deduction type"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Deduction type]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Deduction type]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Deductible amount]"
+                      cachedDataType="numeric"
+                      cachedName="Deductible amount"
+                      cachedPrecision="38"
+                      cachedScale="20"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Deductible amount]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Deductible amount]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Country Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Country Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Hotel No]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Hotel No" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Post Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Post Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Room price limit]"
+                      dataType="i4"
+                      name="Room price limit" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Roomprice tax %]"
+                      dataType="numeric"
+                      name="Roomprice tax %"
+                      precision="38"
+                      scale="16" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Breakfast tax %]"
+                      dataType="numeric"
+                      name="Breakfast tax %"
+                      precision="38"
+                      scale="16" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Deduction type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2048"
+                      name="Deduction type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Deductible amount]"
+                      dataType="numeric"
+                      name="Deductible amount"
+                      precision="38"
+                      scale="20" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\OLE DB-Quelle"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="OLE DB-Quelle"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">;WITH TA AS
+(
+  SELECT [Tax Jurisdiction Code]
+       , [Tax Group Code]
+       , MAX([Effective Date]) [Effective Date]
+    FROM [DynNavHRS].[dbo].[HRS$Tax Detail] WITH (NOLOCK)
+GROUP BY [Tax Jurisdiction Code]
+       , [Tax Group Code]
+), HD AS 
+(
+  SELECT TD.[Tax Group Code]
+       , SUM(CASE WHEN TD.[Tax Jurisdiction Code] IN ('VAT','SERVICETAX') THEN TD.[Maximum Amount_Qty_] ELSE 0 END) [Roomprice tax %]
+    FROM [DynNavHRS].[dbo].[HRS$Tax Detail] TD WITH (NOLOCK)
+    JOIN [DynNavHRS].[dbo].[HRS$Tax Group] TG WITH (NOLOCK)
+      ON TG.[Code] = TD.[Tax Group Code]	
+    JOIN [DynNavHRS].[dbo].[HRS$Customer] CU WITH (NOLOCK)
+      ON CU.[No_] = TD.[Tax Group Code]
+    JOIN TA
+      ON TA.[Tax Jurisdiction Code] = TD.[Tax Jurisdiction Code]
+     AND TA.[Tax Group Code] = TD.[Tax Group Code]
+     AND TA.[Effective Date] = TD.[Effective Date]
+   WHERE TG.[Use Hotelstamm] = 1
+GROUP BY TD.[Tax Group Code]
+  HAVING SUM(CASE WHEN TD.[Tax Jurisdiction Code] IN ('VAT','SERVICETAX') THEN TD.[Maximum Amount_Qty_] ELSE 0 END)&gt;0
+)
+ SELECT NULL [Country Code]
+      , [Tax Group Code] [Hotel No]
+	  , NULL [Post Code]
+	  , NULL [Room price limit]
+	  , [Roomprice tax %]
+	  , NULL [Breakfast tax %]
+      , NULL [Deduction type]
+	  , NULL [Deductible amount]
+   FROM HD
+UNION
+SELECT NULL [Country Code]
+     , NULL [Hotel No]
+	 , [Code] [Post Code]
+	 , NULL
+	 , NULL
+	 , NULL
+	 , DT.String [Deduction type]
+	 , [Deductible Amount]
+  FROM DynNavHRS.dbo.[HRS$Post Code] PC WITH (NOLOCK)
+  JOIN DynNavHRS.dbo.Split('none,before tax,after tax,per person,per roomnight,per stay',',') DT
+    ON DT.[Index] = [Deduction Type]+1
+ WHERE [Deduction Type]&gt;0
+UNION
+ SELECT [Country] [Country Code]
+      , NULL [Hotel No]
+	  , NULL [Post Code]
+	  , NULL [Room price limit]
+      , [VAT in %] * [Use VAT] + [Service Tax] * [Use Service Tax] [Roomprice tax %]
+      , [Breakfast Tax] * [Use Breakfast Tax] [Breakfast tax %]
+      , NULL [Deduction type]
+	  , NULL [Deductible amount]
+  FROM [DynNavHRS].[dbo].[HRS$Foreign Tax] WITH (NOLOCK)
+ WHERE [Country]&lt;&gt;0 AND [Country]&lt;&gt;99999
+
+ORDER BY 1,3,2</property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  connectionManagerRefId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Country Code]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      name="Country Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel No]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Hotel No]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Hotel No]"
+                      name="Hotel No"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Post Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Post Code]"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Post Code]"
+                      name="Post Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Room price limit]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Room price limit]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Room price limit]"
+                      name="Room price limit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Roomprice tax %]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Roomprice tax %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Roomprice tax %]"
+                      name="Roomprice tax %"
+                      precision="38"
+                      scale="16"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Breakfast tax %]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Breakfast tax %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Breakfast tax %]"
+                      name="Breakfast tax %"
+                      precision="38"
+                      scale="16"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Deduction type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Deduction type]"
+                      length="2048"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Deduction type]"
+                      name="Deduction type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Deductible amount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Deductible amount]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Deductible amount]"
+                      name="Deductible amount"
+                      precision="38"
+                      scale="20"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Country Code]"
+                      dataType="i4"
+                      name="Country Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Hotel No]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Hotel No" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Post Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Post Code" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Room price limit]"
+                      dataType="i4"
+                      name="Room price limit" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Roomprice tax %]"
+                      dataType="numeric"
+                      name="Roomprice tax %"
+                      precision="38"
+                      scale="16" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Breakfast tax %]"
+                      dataType="numeric"
+                      name="Breakfast tax %"
+                      precision="38"
+                      scale="16" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Deduction type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2048"
+                      name="Deduction type" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Deductible amount]"
+                      dataType="numeric"
+                      name="Deductible amount"
+                      precision="38"
+                      scale="20" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Country Code]"
+                      name="Country Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Hotel No]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Hotel No]"
+                      name="Hotel No" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Post Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Post Code]"
+                      name="Post Code" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Room price limit]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Room price limit]"
+                      name="Room price limit" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Roomprice tax %]"
+                      dataType="numeric"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Roomprice tax %]"
+                      name="Roomprice tax %"
+                      precision="38"
+                      scale="16" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Breakfast tax %]"
+                      dataType="numeric"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Breakfast tax %]"
+                      name="Breakfast tax %"
+                      precision="38"
+                      scale="16" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Deduction type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2048"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Deduction type]"
+                      name="Deduction type" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Deductible amount]"
+                      dataType="numeric"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Deductible amount]"
+                      name="Deductible amount"
+                      precision="38"
+                      scale="20" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Datenflusstask"
+          TopLeft="156,49" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Datenflusstask\OLE DB-Quelle"
+          TopLeft="233,63" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Datenflusstask\Flatfileziel"
+          TopLeft="305,277" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="310.5,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="58.5,172"
+              Start="0,0"
+              End="58.5,164.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,82" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,82"
+                    Point2="0,86"
+                    Point3="4,86" />
+                  <mssgle:LineSegment
+                    End="54.5,86" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.5,86"
+                    Point2="58.5,86"
+                    Point3="58.5,90" />
+                  <mssgle:LineSegment
+                    End="58.5,164.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\OLE DB-Quelle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
