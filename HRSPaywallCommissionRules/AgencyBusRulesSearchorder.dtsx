@@ -11,8 +11,8 @@
   DTS:LocaleID="1031"
   DTS:ObjectName="AgencyBusRulesSearchorder"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{2930356F-7405-4397-A902-A72660693B4F}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{AF6F7523-AB37-4B49-B374-1F5CB3E14AC2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\tma04\source\repos\HRSPaywallCommissionRules\Export\AgencyBusRulesSearchorder.txt">
+          DTS:ConnectionString="D:\Download C\AgencyBusRulesSearchorder.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Product"
-              DTS:DTSID="{B2CB5BED-B517-47E5-87CD-DA6605738A24}"
+              DTS:DTSID="{4A5F799C-D5F9-41B5-ABCF-390E419C0C41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -46,7 +46,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="No_"
-              DTS:DTSID="{A9BBFD84-2315-4CC8-91B3-026C99E2C471}"
+              DTS:DTSID="{2B6913DE-02FD-4C27-9EEB-52555B42A3EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,7 +54,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Sortorder No_"
-              DTS:DTSID="{697133A1-4CDF-4FCD-B7FD-AC81A5EAA0CB}"
+              DTS:DTSID="{5B2E28F1-6C8A-47E4-BB57-CDEC60E861B2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -62,7 +62,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Estimated Sortorder No_"
-              DTS:DTSID="{D1F6B286-08C5-4EA4-BD5C-659267CA046C}"
+              DTS:DTSID="{65F166CB-8D26-4078-9393-70A4E9C00B69}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -70,7 +70,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Date of Reference Filter"
-              DTS:DTSID="{11881814-3868-4B30-B7F0-A57D45E18F27}"
+              DTS:DTSID="{EEB2D0B3-D713-43F6-8A43-DF31ADAEF0FC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +78,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Category Filter"
-              DTS:DTSID="{C6C54B53-C636-4485-A007-2BBBF58A6582}"
+              DTS:DTSID="{B397CA25-21E3-4C94-B3D6-2B6BB53F6B72}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +86,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Client Filter"
-              DTS:DTSID="{91B4B748-5CEB-4C4C-A4C4-98ECA966929C}"
+              DTS:DTSID="{693651F4-E392-434F-BEB2-D28376210DF0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -94,7 +94,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Hotel Filter"
-              DTS:DTSID="{BDB67771-BFA9-4475-A389-2A9A228E3BC6}"
+              DTS:DTSID="{4040B26C-F42F-4FB2-B2D1-CC5D4CC418F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Contract Status Filter"
-              DTS:DTSID="{65358341-5F94-4330-86FC-72DD4573305A}"
+              DTS:DTSID="{32AE6AC2-D8DD-4806-BDEC-12D5379E93C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Brand Filter"
-              DTS:DTSID="{FF0BECA7-6B34-49F1-96A7-83BFE4129B96}"
+              DTS:DTSID="{C3D5EF3F-B4C2-48DB-A3EA-70367135816C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,7 +118,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Chain Filter"
-              DTS:DTSID="{B65F33FA-079A-455B-BAEC-C4E645DC1FED}"
+              DTS:DTSID="{C40D5328-371D-44AA-98E1-F8AEAD8CE936}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -126,7 +126,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="MuseID Filter"
-              DTS:DTSID="{1E82C83E-0A0B-41D5-AD5A-B831A433B4AD}"
+              DTS:DTSID="{94AAF94A-04CA-4837-BB0C-5B2650C34789}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -134,7 +134,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Country Filter"
-              DTS:DTSID="{C520CBC7-052D-48B9-8874-69B4F8AE2311}"
+              DTS:DTSID="{C696AB86-F777-4171-B559-C6B089B2A313}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -142,7 +142,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Continent Filter"
-              DTS:DTSID="{CD678C7F-60E3-41DB-986D-83FE4759C2AC}"
+              DTS:DTSID="{D1507B02-0E11-4198-9E9C-8C880358FA00}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Is Country Rule"
-              DTS:DTSID="{272FA0A5-3B0F-4C89-8C47-CB353DCF2304}"
+              DTS:DTSID="{1BAF100F-4432-43FD-9723-908C67AE25CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Description"
-              DTS:DTSID="{93659CBD-3E83-41A1-B033-AC16B0D69ADF}"
+              DTS:DTSID="{A3C85C02-5A8F-483B-9D29-4350B7B624AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +167,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Company Filter"
-              DTS:DTSID="{5A0BCAEB-E5F0-4ED4-B087-C3490802F21D}"
+              DTS:DTSID="{49F0FDD9-7420-4ED9-8073-B83AFE195E6F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -175,7 +175,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Rate Type Filter"
-              DTS:DTSID="{942A348E-7957-4F03-9090-6EE3B067548A}"
+              DTS:DTSID="{F50A921F-5A5E-4A4D-AFA1-816C6F38F0CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Corporate Rate Discount Filter"
-              DTS:DTSID="{E97B985E-BEEA-44CF-A218-64D4E4DD6AE1}"
+              DTS:DTSID="{327BCE99-DF7A-4848-A3DE-70D6361CCEB3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +191,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Multisource"
-              DTS:DTSID="{509391EC-B70D-4563-94A3-389B1D8AC730}"
+              DTS:DTSID="{BADF2934-B1FE-44D3-A12D-FB3922F35E24}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -199,7 +199,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Segment Filter"
-              DTS:DTSID="{483D3DF6-D196-4828-876E-3E5069AFCC56}"
+              DTS:DTSID="{1C1B7EAA-1FD8-41BE-A078-B758FD080318}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -207,7 +207,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Commission Type Filter"
-              DTS:DTSID="{60901029-914D-456E-9E2D-414135F8B5F1}"
+              DTS:DTSID="{5835F349-D56E-4D54-958E-B43ED26378C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -215,7 +215,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="GTC Rejected Filter"
-              DTS:DTSID="{77BB5D2A-25FC-48F7-B714-9A1093C4B37A}"
+              DTS:DTSID="{3252AC93-38C8-4B51-BD56-E32B6C0B2081}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -223,7 +223,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Rate Plan Code Filter"
-              DTS:DTSID="{B7BAD13C-3CE2-48B7-AC46-EB3A5C455485}"
+              DTS:DTSID="{4103D5A8-AD91-4451-B25E-B34D84F2611F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -231,7 +231,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Reservationsource Group Filter"
-              DTS:DTSID="{A9143AA2-353D-4640-A4A4-C138584A374E}"
+              DTS:DTSID="{0F98EED9-7F49-4096-B2F7-709418D67707}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -611,15 +611,15 @@
       ,[Reservationsource Group Filter]
       ,[Product]
   FROM [dbo].[HRS$Agency Bus_ Rules Searchorder]
- WHERE [No_] IN 
-       (
-          SELECT [Searchorder No_] 
-            FROM [HRS$Agency Display Line] DL WITH (NOLOCK) 
-            JOIN [HRS$Agency Display Header] DH WITH (NOLOCK) ON DL.[Display Case No_]=DH.[Case No_] 
-            JOIN [HRS$Agency Business Rules] BR WITH (NOLOCK) ON DL.[Agency Business Rules Code]=BR.[Code]
-           WHERE DL.[Departure Date] &gt;= '2022-01-01' 
-        GROUP BY [Searchorder No_]
-        )</property>
+ --WHERE [No_] IN 
+--       (
+--          SELECT [Searchorder No_] 
+--            FROM [HRS$Agency Display Line] DL WITH (NOLOCK) 
+--            JOIN [HRS$Agency Display Header] DH WITH (NOLOCK) ON DL.[Display Case No_]=DH.[Case No_] 
+--            JOIN [HRS$Agency Business Rules] BR WITH (NOLOCK) ON DL.[Agency Business Rules Code]=BR.[Code]
+--           WHERE DL.[Departure Date] &gt;= '2022-01-01' 
+--        GROUP BY [Searchorder No_]
+--        )</property>
                 <property
                   dataType="System.String"
                   description="Die Variable, die den auszuführenden SQL-Befehl enthält."

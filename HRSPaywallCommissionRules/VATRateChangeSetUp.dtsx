@@ -1,0 +1,739 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/5/2024 3:07:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="VM-10-0064"
+  DTS:CreatorName="HRS\tma04"
+  DTS:DTSID="{64568C0E-02E4-460F-BA2E-4A2D70506C08}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1031"
+  DTS:ObjectName="VATRateChangeSetUp"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{355D6FAB-8B3A-476F-ACA7-39367FE673F4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{45B5D877-1BDA-4778-A1A5-6AB47762CE62}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1031"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\tma04\source\repos\HRSPaywallCommissionRules\Export\VATRateChangeSetup.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VAT Change From Date"
+              DTS:DTSID="{E085C003-D4B1-4146-B917-3B503817F90E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VAT Change To Date"
+              DTS:DTSID="{C009F613-AD64-4C55-82C2-53E77FCEB66C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VAT Change To %"
+              DTS:DTSID="{30E217E0-397B-4517-8676-638060BDF3EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PrimaryKey"
+              DTS:DTSID="{36C3D194-6A23-43CC-A983-19A40D72458F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bf_ VAT Change 1 Date"
+              DTS:DTSID="{051862CB-C5E7-4C8A-8D37-B3A7D6ECFD96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bf_ VAT Change 1 To %"
+              DTS:DTSID="{2C2A953F-5D45-4D44-BDE4-B9F3694AE388}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bf_ VAT Change 2 Date"
+              DTS:DTSID="{BDF38DB6-684E-4875-BCAE-C223D2B8B91B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bf_ VAT Change 2 To %"
+              DTS:DTSID="{4737B89E-0E88-4CE0-BA2F-80488AA7CAFA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bf_ VAT Change 3 Date"
+              DTS:DTSID="{1E198B04-CFE0-481D-8739-F53D742D0730}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bf_ VAT Change 3 To %"
+              DTS:DTSID="{FB2DEB0B-D850-4D72-B56E-0BCC7AB8B2F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VAT Logis Change To %"
+              DTS:DTSID="{D1B5D58D-67FE-451A-B6D9-293A9B545EA0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9E2DC81F-1783-4CE5-BFC1-B552092DAB86}"
+      DTS:ObjectName="P-NAV-MSSQL-CL.DynNavHRS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=P-NAV-MSSQL-CL;Initial Catalog=DynNavHRS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Datenflusstask"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Datenflusstask"
+      DTS:DTSID="{A96CB0B4-D052-4AC9-BF7E-F609BB2CBB74}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Datenflusstask">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Datenflusstask\Flatfileziel"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flatfileziel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;1"
+              description="Flatfileziel"
+              localeId="1031"
+              name="Flatfileziel">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Gibt an, ob die Daten die Zieldatei überschreiben oder an sie angehängt werden."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Gibt den Text an, der vor dem Schreiben von Daten in die Zieldatei geschrieben werden soll."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Bei Aktivierung des Textqualifizierers wird hiermit angegeben, ob der Textqualifizierer in den Daten, die in die Zieldatei geschrieben werden, mit Escapezeichen versehen wird."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\Flatfileziel.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+                  hasSideEffects="true"
+                  name="Eingabe des Flatfileziels">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[VAT Change From Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="VAT Change From Date"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Change From Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change From Date]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[VAT Change To Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="VAT Change To Date"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Change To Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change To Date]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[VAT Change To %]"
+                      cachedDataType="i4"
+                      cachedName="VAT Change To %"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Change To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change To %]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[PrimaryKey]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="PrimaryKey"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[PrimaryKey]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PrimaryKey]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Bf_ VAT Change 1 Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Bf_ VAT Change 1 Date"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 1 Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 Date]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Bf_ VAT Change 1 To %]"
+                      cachedDataType="numeric"
+                      cachedName="Bf_ VAT Change 1 To %"
+                      cachedPrecision="38"
+                      cachedScale="20"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 1 To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 To %]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Bf_ VAT Change 2 Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Bf_ VAT Change 2 Date"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 2 Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 Date]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Bf_ VAT Change 2 To %]"
+                      cachedDataType="numeric"
+                      cachedName="Bf_ VAT Change 2 To %"
+                      cachedPrecision="38"
+                      cachedScale="20"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 2 To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 To %]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Bf_ VAT Change 3 Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Bf_ VAT Change 3 Date"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 3 Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 Date]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[Bf_ VAT Change 3 To %]"
+                      cachedDataType="numeric"
+                      cachedName="Bf_ VAT Change 3 To %"
+                      cachedPrecision="38"
+                      cachedScale="20"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 3 To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 To %]" />
+                    <inputColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].Columns[VAT Logis Change To %]"
+                      cachedDataType="i4"
+                      cachedName="VAT Logis Change To %"
+                      externalMetadataColumnId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Logis Change To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Logis Change To %]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Change From Date]"
+                      dataType="dbTimeStamp"
+                      name="VAT Change From Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Change To Date]"
+                      dataType="dbTimeStamp"
+                      name="VAT Change To Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Change To %]"
+                      dataType="i4"
+                      name="VAT Change To %" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[PrimaryKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="PrimaryKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 1 Date]"
+                      dataType="dbTimeStamp"
+                      name="Bf_ VAT Change 1 Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 1 To %]"
+                      dataType="numeric"
+                      name="Bf_ VAT Change 1 To %"
+                      precision="38"
+                      scale="20" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 2 Date]"
+                      dataType="dbTimeStamp"
+                      name="Bf_ VAT Change 2 Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 2 To %]"
+                      dataType="numeric"
+                      name="Bf_ VAT Change 2 To %"
+                      precision="38"
+                      scale="20" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 3 Date]"
+                      dataType="dbTimeStamp"
+                      name="Bf_ VAT Change 3 Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[Bf_ VAT Change 3 To %]"
+                      dataType="numeric"
+                      name="Bf_ VAT Change 3 To %"
+                      precision="38"
+                      scale="20" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels].ExternalColumns[VAT Logis Change To %]"
+                      dataType="i4"
+                      name="VAT Logis Change To %" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Datenflusstask\OLE DB-Quelle"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB-Quelle;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Alle Rechte vorbehalten; http://www.microsoft.com/sql/support;7"
+              description="OLE DB-Quelle"
+              name="OLE DB-Quelle"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Die Anzahl der Sekunden für das Timeout eines Befehls. Der Wert &quot;0&quot; zeigt einen unendlichen Timeoutwert an."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Gibt den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts an."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Gibt die Variable an, die den Namen des zum Öffnen eines Rowsets verwendeten Datenbankobjekts enthält."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Der auszuführende SQL-Befehl."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [VAT Change From Date]
+      ,[VAT Change To Date]
+      ,[VAT Change To %]
+      ,[PrimaryKey]
+      ,[Bf_ VAT Change 1 Date]
+      ,[Bf_ VAT Change 1 To %]
+      ,[Bf_ VAT Change 2 Date]
+      ,[Bf_ VAT Change 2 To %]
+      ,[Bf_ VAT Change 3 Date]
+      ,[Bf_ VAT Change 3 To %]
+      ,[VAT Logis Change To %]
+  FROM [dbo].[HRS$VAT Rate Change Setup]</property>
+                <property
+                  dataType="System.String"
+                  description="Die Variable, die den auszuführenden SQL-Befehl enthält."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt die zu verwendende Spaltencodepage an, wenn keine Codepageinformationen von der Datenquelle verfügbar sind."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Erzwingt die Verwendung des DefaultCodePage-Eigenschaftswerts beim Beschreiben von Zeichendaten."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Gibt den zum Zugreifen auf die Datenbank verwendeten Modus an."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Die Zuordnungen zwischen den Parametern im SQL-Befehl und den Variablen."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  connectionManagerRefId="Package.ConnectionManagers[P-NAV-MSSQL-CL.DynNavHRS]"
+                  description="Die für den Zugriff auf die Datenbank verwendete OLE DB-Laufzeitverbindung."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]"
+                  name="Ausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change From Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Change From Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change From Date]"
+                      name="VAT Change From Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change To Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Change To Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change To Date]"
+                      name="VAT Change To Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change To %]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Change To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Change To %]"
+                      name="VAT Change To %"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PrimaryKey]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PrimaryKey]"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[PrimaryKey]"
+                      name="PrimaryKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 1 Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 Date]"
+                      name="Bf_ VAT Change 1 Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 To %]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 1 To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 To %]"
+                      name="Bf_ VAT Change 1 To %"
+                      precision="38"
+                      scale="20"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 2 Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 Date]"
+                      name="Bf_ VAT Change 2 Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 To %]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 2 To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 To %]"
+                      name="Bf_ VAT Change 2 To %"
+                      precision="38"
+                      scale="20"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 3 Date]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 Date]"
+                      name="Bf_ VAT Change 3 Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 To %]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 3 To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 To %]"
+                      name="Bf_ VAT Change 3 To %"
+                      precision="38"
+                      scale="20"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Logis Change To %]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Konvertierung"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Logis Change To %]"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].Columns[VAT Logis Change To %]"
+                      name="VAT Logis Change To %"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Change From Date]"
+                      dataType="dbTimeStamp"
+                      name="VAT Change From Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Change To Date]"
+                      dataType="dbTimeStamp"
+                      name="VAT Change To Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Change To %]"
+                      dataType="i4"
+                      name="VAT Change To %" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[PrimaryKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="PrimaryKey" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 1 Date]"
+                      dataType="dbTimeStamp"
+                      name="Bf_ VAT Change 1 Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 1 To %]"
+                      dataType="numeric"
+                      name="Bf_ VAT Change 1 To %"
+                      precision="38"
+                      scale="20" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 2 Date]"
+                      dataType="dbTimeStamp"
+                      name="Bf_ VAT Change 2 Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 2 To %]"
+                      dataType="numeric"
+                      name="Bf_ VAT Change 2 To %"
+                      precision="38"
+                      scale="20" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 3 Date]"
+                      dataType="dbTimeStamp"
+                      name="Bf_ VAT Change 3 Date" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[Bf_ VAT Change 3 To %]"
+                      dataType="numeric"
+                      name="Bf_ VAT Change 3 To %"
+                      precision="38"
+                      scale="20" />
+                    <externalMetadataColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle].ExternalColumns[VAT Logis Change To %]"
+                      dataType="i4"
+                      name="VAT Logis Change To %" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle]"
+                  isErrorOut="true"
+                  name="Fehlerausgabe der OLE DB-Quelle">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Change From Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Change From Date]"
+                      name="VAT Change From Date" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Change To Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Change To Date]"
+                      name="VAT Change To Date" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Change To %]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Change To %]"
+                      name="VAT Change To %" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PrimaryKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[PrimaryKey]"
+                      name="PrimaryKey" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 Date]"
+                      name="Bf_ VAT Change 1 Date" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 To %]"
+                      dataType="numeric"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 1 To %]"
+                      name="Bf_ VAT Change 1 To %"
+                      precision="38"
+                      scale="20" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 Date]"
+                      name="Bf_ VAT Change 2 Date" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 To %]"
+                      dataType="numeric"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 2 To %]"
+                      name="Bf_ VAT Change 2 To %"
+                      precision="38"
+                      scale="20" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 Date]"
+                      name="Bf_ VAT Change 3 Date" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 To %]"
+                      dataType="numeric"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[Bf_ VAT Change 3 To %]"
+                      name="Bf_ VAT Change 3 To %"
+                      precision="38"
+                      scale="20" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Logis Change To %]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[VAT Logis Change To %]"
+                      name="VAT Logis Change To %" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Fehlerausgabe der OLE DB-Quelle].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+              endId="Package\Datenflusstask\Flatfileziel.Inputs[Eingabe des Flatfileziels]"
+              name="Ausgabe der OLE DB-Quelle"
+              startId="Package\Datenflusstask\OLE DB-Quelle.Outputs[Ausgabe der OLE DB-Quelle]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Datenflusstask"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Datenflusstask">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Datenflusstask\OLE DB-Quelle"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Datenflusstask\Flatfileziel"
+          TopLeft="204,197" />
+        <EdgeLayout
+          Id="Package\Datenflusstask.Paths[Ausgabe der OLE DB-Quelle]"
+          TopLeft="137.5,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="130.5,95"
+              Start="0,0"
+              End="130.5,87.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.5"
+                    Point2="0,47.5"
+                    Point3="4,47.5" />
+                  <mssgle:LineSegment
+                    End="126.5,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.5,47.5"
+                    Point2="130.5,47.5"
+                    Point3="130.5,51.5" />
+                  <mssgle:LineSegment
+                    End="130.5,87.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Datenflusstask\OLE DB-Quelle">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
